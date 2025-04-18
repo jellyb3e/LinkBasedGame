@@ -1,0 +1,202 @@
+{
+    "Title": "where oh WHERE are my keys",
+    "Credits": "Created by Julia Manou (jmanou@ucsc.edu).",
+    "InitialLocation": "outside car",
+    "Items": {
+        "car keys": false,
+        "swaggy hat": false
+    },
+    "InteractiveLocations": {
+        "trash": {
+            "Body": [
+                "FUCK, IT BIT ME",
+                "it... looks a little angry. and rabid.",
+                "god maybe if i like put a hat on or something he might think i have a mysterious and enticing aura and thus deem me unworthy of attacking."
+            ],
+            "Trigger": "swaggy hat",
+            "AltBody": "aw what a nice little raccoon :3 i <3 raccoons !!",
+            "Choices": [
+                {
+                    "Text": "get out of the grimy trash you grimy individual",
+                    "Target": "side of house"
+                }
+            ]
+        }
+    },
+    "Locations": {
+        "outside car": {
+            "Body": "i'm standing by my car. if i don't find my car keys soon, there's no way i'm making it to my job interview for a highly sought-after position at the highly regarded establishment of pizza hut.",
+            "Choices": [
+                {
+                    "Text": "get in car",
+                    "Target": "car"
+                },
+                {
+                    "Text": "go to porch",
+                    "Target": "porch"
+                }
+            ]
+        },
+        "car": {
+            "Body": "i'm in my car now.",
+            "Choices": [
+                {
+                    "Text": "start the car",
+                    "Needs": "car keys",
+                    "Target": "end"
+                },
+                {
+                    "Text": "open the glove box",
+                    "Target": "glove box"
+                },
+                {
+                    "Text": "get out",
+                    "Target": "outside car"
+                }
+            ]
+        },
+        "keys": {
+            "Body": "i found them !! now to start the car so i can make my interview at the esteemed pizza establishment pizza hut.",
+            "Choices": [
+                {
+                    "Text": "return",
+                    "Target": "glove box"
+                }
+            ]
+        },
+        "glove box": {
+            "Body": "... just my grimy glove box. there are a few things just kind of... littered around here.",
+            "Choices": [
+                {
+                    "Text": "--> GRAB KEYS <--",
+                    "Has": "car keys",
+                    "Target": "keys"
+                },
+                {
+                    "Text": "poke around in the filth",
+                    "Target": "glove box"
+                },
+                {
+                    "Text": "close glove box",
+                    "Target": "car"
+                }
+            ]
+        },
+        "porch": {
+            "Body": "i'm on my grimy porch.",
+            "Choices": [
+                {
+                    "Text": "enter house",
+                    "Target": "entryway"
+                },
+                {
+                    "Text": "walk around house",
+                    "Target": "side of house"
+                },
+                {
+                    "Text": "go to car",
+                    "Target": "outside car"
+                }
+            ]
+        },
+        "side of house": {
+            "Body": "i'm on the grimy side of my grimy house.",
+            "Choices": [
+                {
+                    "Text": "fish around in the grimy trash (beware the grimy raccoon that haunts the trash (the grimy garbage goblin))",
+                    "Target": "trash"
+                },
+                {
+                    "Text": "go to porch",
+                    "Target": "porch"
+                }
+            ]
+        },
+        "entryway": {
+            "Body": "i'm in my house. to my left is the kitchen. to my right is the living room. straight ahead are some stairs.",
+            "Choices": [
+                {
+                    "Text": "go to kitchen",
+                    "Target": "kitchen"
+                },
+                {
+                    "Text": "go upstairs",
+                    "Target": "bedroom"
+                },
+                {
+                    "Text": "go to living room",
+                    "Target": "living room"
+                },
+                {
+                    "Text": "go outside",
+                    "Target": "porch"
+                }
+            ]
+        },
+        "kitchen": {
+            "Body": "this is my grimy kitchen. it's a bit of a mess... i've been ordering a lot of pizza in preparation for my technical interview.",
+            "Choices": [
+                {
+                    "Text": "go to backyard",
+                    "Target": "backyard"
+                },
+                {
+                    "Text": "go to entryway",
+                    "Target": "entryway"
+                }
+            ]
+        },
+        "backyard": {
+            "Body": "this is my grimy backyard. there isn't really anything here",
+            "Choices": [
+                {
+                    "Text": "go to kitchen",
+                    "Target": "kitchen"
+                },
+                {
+                    "Text": "go to living room",
+                    "Target": "living room"
+                }
+            ]
+        },
+        "living room": {
+            "Body": "this is my grimy living room. i decorated it with a lot of pizza hut paraphernalia. i love pizza hut.",
+            "Choices": [
+                {
+                    "Text": "go to kitchen",
+                    "Target": "kitchen"
+                },
+                {
+                    "Text": "go to entryway",
+                    "Target": "entryway"
+                }
+            ]
+        },
+        "bedroom": {
+            "Body": "my bedroom !! my grimy bed !! my wardrobe !! hey... it has some hats in it. maybe if i put one on it'll really WOW my interviewers.",
+            "Choices": [
+                {
+                    "Text": "put on a hat",
+                    "Has": "swaggy hat",
+                    "Target": "hat"
+                },
+                {
+                    "Text": "go downstairs",
+                    "Target": "entryway"
+                }
+            ]
+        },
+        "hat": {
+            "Body": "god am i beautiful now. this is sure to get me the job (and ward off raccoons?? (foreshadowing ????)).",
+            "Choices": [
+                {
+                    "Text": "return",
+                    "Target": "bedroom"
+                }
+            ]
+        },
+        "end": {
+            "Body": "the engine ROARS. i fly off into the horizon. it is the first day of the rest of my life."
+        }
+    }
+}
